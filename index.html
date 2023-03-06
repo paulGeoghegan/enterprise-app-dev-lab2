@@ -4,6 +4,24 @@
 	<title> Home </title>
 </head>
 <body>
+		<h1>Home Page</h1>
 
+	<p> Please select from one of the following countries </p>
+	<div id="countryDropDownDiv"></div>
+
+	<script>
+
+		let countryList;
+		let xmlhttp = new XMLHttpRequest();
+		console.log("Sending Request");
+		xmlhttp.open("POST","/getCountries");
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				countryList = xmlhttp.response;
+				console.log(countryList);
+			}
+		}
+
+	</script>
 </body>
 </html>
