@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/paulGeoghegan/enterprise-app-dev-lab2/issues"
   },
-  "homepage": "https://github.com/paulGeoghegan/enterprise-app-dev-lab2#readme"
+  "homepage": "https://github.com/paulGeoghegan/enterprise-app-dev-lab2#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
