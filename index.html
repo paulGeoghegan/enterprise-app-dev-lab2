@@ -2,26 +2,26 @@
 <html lang="en">
 <head>
 	<title> Home </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 		<h1>Home Page</h1>
 
-	<p> Please select from one of the following countries </p>
-	<div id="countryDropDownDiv"></div>
+	<input id="get20Countries" type="button" value="Get First 20 Countries">
+	<input id="getAllCountries" type="button" value="Get Countries"></br>
+	<input id="toggleCoast" type="button" value="Hide Coast">
+	<div id="countryTable"></div>
 
-	<script>
-
-		let countryList;
-		let xmlhttp = new XMLHttpRequest();
-		console.log("Sending Request");
-		xmlhttp.open("POST","/getCountries");
-		xmlhttp.onreadystatechange = function() {
-			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-				countryList = xmlhttp.response;
-				console.log(countryList);
-			}
-		}
-
-	</script>
+	<h1> Technologies </h1>
+	<h3> Node JS</h3>
+	<p> Node JS was used to build this web app. It allows a developer to create a front and back end with little effort as the logic for the back end is contained within one main file e.g. index.js. This is then filled with roots that the server to handle different types of requests like app.get("myStuff") or app.post("myStuff") this is used with expres js to acomplish this.</p>
+	<h3> JQuery</h3>
+	<p> Jquery was the main language used for scripting on the front end. It allows for the use of css style selectors # for id . for class etc but also lets you use all of the features of javascript while allowing you to still js along side it. It also has some of it's own inbuilt functions that allow you to do other things that js doesn't or atleast allot easier such as $.ajax, $.get and $.post</p>
+	<h3> AJAX</h3>
+	<p> AJAX was used to handle any requests sent to the server. This allows us dynamicly load data without re-loading the whole page as you will see when first opening the page as the top heading appears but nothing else untill the table is appended to the page but it is not refreshed.</p>
+	<h3> JSON</h3>
+	<p> JSON was used on the back end for storing the country data in files which is usefull as it allows us to store the data in a human readable form which is easily interacted with in numerious programming languages.</p>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="/script.js"></script>
 </body>
 </html>
